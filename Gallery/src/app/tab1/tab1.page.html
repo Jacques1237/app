@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Zoom-test
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-slides [options]="sliderOpts">
+        <ion-slide *ngFor="let img of [1,2,3]">
+         <img [src]="'http://localhost:5000/Images/uploadedImages/' + img + '.jpg'" tappable (click) = "openPreview(img)"> 
+        </ion-slide>  
+    </ion-slides>  
+
+  </ion-content>
+
+    
+    
+
+  

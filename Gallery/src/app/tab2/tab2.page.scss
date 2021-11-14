@@ -1,0 +1,67 @@
+.image-container {
+    min-height: 150px;
+    min-width: 150px;
+    border-radius: 15px 50px;
+    background-size: cover;
+}
+
+.header
+{
+    text-align: center;
+    color: orangered;
+}
+
+.ion-color
+{
+    background: black;
+}
+
+.grid-color
+{
+    background: gray;
+}
+
+.img
+{
+    min-height: 20px;
+    min-width: 20px;
+}
+.ion-color .images
+ {
+    min-height: 200px;
+    min-width: 200px;
+    background-size: cover
+ }
+
+.ion-color .slider
+ {
+    
+    max-width: 100% !important;
+    max-height: 100% !important;
+    border-radius: 5px;
+
+ }
+
+ ion-grid{
+     ion-toolbar{
+         ion-grid{
+            ion-row{
+                ion-col{
+                    ion-slides{
+                        align-items: start;
+                        text-align: center;
+                        max-width: 100% !important;
+                        max-height: 100% !important;
+                        ion-slide{
+                            max-width: 100% !important;
+                            max-height: 100% !important;
+                        }
+                    }
+                }
+            }
+         }
+     }
+ }
+
+ 
+ 

@@ -1,0 +1,29 @@
+
+<ion-content fullscreen>
+
+  <ion-item class = "close-fake" lines="none" text-center>
+    <ion-button (click)="close()" fill="clear" color="light">
+      <ion-icon name="close" slot="start"></ion-icon>
+      Back
+    </ion-button>
+
+   <!-- <ion-label class = "label">
+     {{img.imagesDescription}}
+   </ion-label> -->
+
+  </ion-item>
+
+  <ion-slides  [options]="sliderOpts" #slider>
+    <ion-slide *ngFor = "let iImg of images">
+      <ion-label class = "label">
+        {{iImg.imagesDescription}}
+      </ion-label>
+        <div class="swiper-zoom-container">
+          <img [src]="createImgPath(iImg.imagesPath)">
+       </div>
+    </ion-slide>
+  </ion-slides>
+  <div class="swiper-button-next" (click)="next()"></div>
+  <div class="swiper-button-prev" (click)="prev()"></div>
+  
+</ion-content>
