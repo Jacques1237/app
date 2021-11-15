@@ -1,0 +1,39 @@
+<ion-header >
+  <ion-toolbar class="headerColor">
+    <ion-title style="text-align: center; color:orangered;" >
+      Sign Up/ Sign In
+    </ion-title>
+    <div style="text-align: right; margin-top: -30px;">
+    <ion-button (click)="close()" fill="clear" color="danger">
+      <ion-icon name="close" slot="start"></ion-icon>
+    </ion-button>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form app">
+ 
+    <div class="boxes">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col align-self-center style="text-align: center; margin-top: 20%;">
+          <ion-button  size="medium" color="light" style="width: 250px; color:rgb(0, 0, 0)">Register</ion-button>
+          <br>
+          <br>
+          <span  class="divider line one-line" style="color:rgba(230, 108, 8, 0.555);"><p style="text-align: center;">or</p></span>
+          <span align-self-center class="already"style="color:rgba(230, 108, 8, 0.555);"><p style="text-align: center;">Already a user?</p></span>
+          <br>
+          <ion-button (click)="signIn()" size="medium" color="danger"  style="width: 250px;">Sign In</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+ 
+</ion-content>

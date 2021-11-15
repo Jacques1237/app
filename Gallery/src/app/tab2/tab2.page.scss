@@ -18,7 +18,7 @@
 
 .grid-color
 {
-    background: gray;
+    background: rgb(0, 0, 0);
 }
 
 .img
@@ -63,5 +63,12 @@
      }
  }
 
- 
+ ion-fab-button {
+     --background: orangered;
+ }
+
+ ion-icon{
+     color:black;
+     font-size: 40px;
+ }
  

@@ -1,3 +1,4 @@
+import { LoginPage } from './../login/login.page';
 import { Component } from '@angular/core';
 import {ModalController } from '@ionic/angular';
 import { API_BASE } from 'src/environments/environment';
@@ -54,5 +55,14 @@ export class Tab2Page {
       this.featuredImage = this.images.filter(x => x.featured);
       console.log(this.images);
     })
+}
+
+async login(){
+  const modal = await this.modalController.create({
+    component: LoginPage,
+    cssClass:'modal-fullscreen',
+    id:'LoginPage'
+  });
+  return await modal.present();
 }
 }
