@@ -4,7 +4,7 @@ import {ModalController } from '@ionic/angular';
 import { API_BASE } from 'src/environments/environment';
 import { ImageModalPage } from '../image-modal/image-modal.page';
 import { IImage } from '../Interfaces/IImage';
-import { PhotoService } from '../services/photo.service';
+//import { PhotoService } from '../services/photo.service';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
