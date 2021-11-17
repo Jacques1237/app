@@ -16,7 +16,7 @@ import { ImageModalPageModule } from './image-modal/image-modal.module';
 import { FormsModule } from '@angular/forms';
 
 //firebase
-import { AngularFireModule } from '@angular/fire';
+import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import {  AngularFireStorageModule } from '@angular/fire/storage';
