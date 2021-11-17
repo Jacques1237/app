@@ -6,7 +6,11 @@ const routes: Routes = [
   { path: 'image-modal', loadChildren: './image-modal/image-modal.module#ImageModalPageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'login-confirm', loadChildren: './login/login-confirm/login-confirm.module#LoginConfirmPageModule' },
-  { path: 'register', loadChildren: './login/register/register.module#RegisterPageModule' }
+  { path: 'register', loadChildren: './login/register/register.module#RegisterPageModule' },  {
+    path: 'page-not-found',
+    loadChildren: () => import('./page-not-found/page-not-found.module').then( m => m.PageNotFoundPageModule)
+  }
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -5,6 +5,13 @@
     background-size: cover;
 }
 
+.headerColor{
+    --background: -webkit-linear-gradient(to left, #2b2a2a, #252525, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  --background: linear-gradient(to left, #2b2a2a, #252525, #000000);
+  text-align: center;
+  color: orangered;
+  }
+
 .header
 {
     text-align: center;
@@ -13,12 +20,14 @@
 
 .ion-color
 {
-    background: black;
+    background: -webkit-linear-gradient(to left, #2b2a2a, #252525, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2b2a2a, #252525, #000000);
 }
 
 .grid-color
 {
-    background: rgb(0, 0, 0);
+    background: -webkit-linear-gradient(to left, #2b2a2a, #252525, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2b2a2a, #252525, #000000);
 }
 
 .img

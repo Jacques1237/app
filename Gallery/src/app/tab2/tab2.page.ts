@@ -33,6 +33,7 @@ export class Tab2Page {
   openPreview(index){
     this.modalController.create({
       component: ImageModalPage,
+      cssClass:'modal-fullscreen',
       componentProps:{
         index: index,
         images: this.images
