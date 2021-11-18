@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { GuardsCheckEnd, RouteReuseStrategy } from '@angular/router';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -16,10 +16,10 @@ import { ImageModalPageModule } from './image-modal/image-modal.module';
 import { FormsModule } from '@angular/forms';
 
 //firebase
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import {  AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import {  AngularFireStorageModule } from '@angular/fire/compat/storage';
 //environment
 import{ environment } from '../environments/environment.prod';
 // AUTH
@@ -31,9 +31,10 @@ import{ AuthGuard } from './guards/auth.guard';
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
+    HttpClientModule,
     BrowserModule,
-     IonicModule.forRoot(), 
-     AppRoutingModule,
+    IonicModule.forRoot(), 
+    AppRoutingModule,
     IonicStorageModule.forRoot(), 
     ImageModalPageModule,
     FormsModule,
