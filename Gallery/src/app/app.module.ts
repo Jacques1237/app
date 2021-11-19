@@ -44,6 +44,8 @@ import{ AuthGuard } from './guards/auth.guard';
     AngularFireStorageModule
   ],
   providers: [
+    AuthService,
+    AuthGuard,
     StatusBar,
     SplashScreen,
     PhotoViewer,
