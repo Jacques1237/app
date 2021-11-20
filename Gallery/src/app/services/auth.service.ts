@@ -51,7 +51,7 @@ export class AuthService {
           this.afauth.signOut();
         }else{
           loading.dismiss();
-          this.router.navigate(['/login']);
+          //this.router.navigate(['/login']);
         }
       })
       .catch(error =>{
@@ -75,7 +75,7 @@ export class AuthService {
     
     this.afauth.signOut().then(() =>{
       loading.dismiss();
-      this.router.navigate(['/login-confirm']);
+      //this.router.navigate(['/login-confirm']);
     })
   }
 

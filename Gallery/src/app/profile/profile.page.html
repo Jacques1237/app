@@ -1,0 +1,37 @@
+<ion-header >
+  <ion-toolbar class="headerColor">
+    <ion-title style="text-align: center; color:orangered;" >
+      Profile
+    </ion-title>
+    <div style="text-align: right; margin-top: -30px;">
+    <ion-button (click)="close()" fill="clear" color="danger">
+      <ion-icon name="close" slot="start"></ion-icon>
+    </ion-button>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form app">
+ 
+    <div class="boxes">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <form>
+      <ion-card>
+        <ion-card-content>
+          <h2>{{user?.userName}} {{user?.userLastName}}</h2>
+          <p>{{user?.userEmail}}</p>
+          <p>{{user?.createdAt | date}}</p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-button (click)="editProfile()"  size="medium" color="danger"  style="width: 250px;">
+        Edit Profile
+      </ion-button>
+    </form>
+</ion-content>

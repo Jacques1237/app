@@ -18,6 +18,8 @@ export class RegisterPage{
   lastName: string;
   email: string;
   password: string;
+  passwordType: string = 'password';
+  passwordIcon: string = 'eye-off';
 
   constructor
   (
@@ -45,7 +47,9 @@ export class RegisterPage{
       });
       loading.present();
 
-      this.afauth.createUserWithEmailAndPassword(this.email, this.password).then((data) =>{
+      this.afauth.createUserWithEmailAndPassword(this.email, this.password)
+      .then((data) =>{
+        data.user.sendEmailVerification();
         this.afs.collection('user').doc(data.user.uid).set({
           'userId': data.user.uid,
           'userName': this.name,
@@ -63,6 +67,12 @@ export class RegisterPage{
           this.toast(error.message, 'danger');
         })
       })
+      .catch(error => {
+        loading.dismiss();
+        this.toast(error.message, 'danger');
+      })
+    }else{
+      this.toast('Please fill in all details!', 'warning');
     }
   }
 
@@ -85,4 +95,9 @@ export class RegisterPage{
     });
     return await modal.present();
   }
+
+  hideShowPassword() {
+    this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
+    this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
+}
 }

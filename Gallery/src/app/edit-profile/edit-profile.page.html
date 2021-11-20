@@ -1,0 +1,51 @@
+<ion-header >
+  <ion-toolbar class="headerColor">
+    <ion-title style="text-align: center; color:orangered;" >
+      Edit Profile
+    </ion-title>
+    <div style="text-align: right; margin-top: -30px;">
+    <ion-button (click)="close()" fill="clear" color="danger">
+      <ion-icon name="close" slot="start"></ion-icon>
+    </ion-button>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form app">
+ 
+  <div class="boxes">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <form>
+    <div style="text-align: center; margin-top: 20%;">
+    <ion-item lines="full" class="headerColor">
+      <ion-label position="floating" style="color:orangered;">First name</ion-label>
+      <ion-input required type="text"  [(ngModel)]= "name" name="name" style="color:#ffff;" placeholder="First name"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full" class="headerColor">
+      <ion-label position="floating" style="color:orangered;">Last name</ion-label>
+      <ion-input type="text" required  [(ngModel)]= "lastName" name="lastName" style="color:#ffff;" placeholder="Last name"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full" class="headerColor">
+      <ion-label position="floating" style="color:orangered;">Email</ion-label>
+      <ion-input type="email" required  [(ngModel)]= "email" name="email" style="color:#ffff;" placeholder="example@example.com"></ion-input>
+    </ion-item>
+
+  </div>
+  <br>
+  <br>
+    <ion-row>
+      <ion-col style="text-align: center;">
+        <ion-button type="submit" (click)="updateProfile()" size="medium" color="danger"  style="width: 250px;">Update</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
+

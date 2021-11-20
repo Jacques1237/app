@@ -40,10 +40,10 @@
   
       <ion-item lines="full" class="headerColor">
         <ion-label position="floating" style="color:orangered;">Password</ion-label>
-        <ion-input type="password" required  [(ngModel)]= "password" name="password" style="color:#ffff;" placeholder="Enter password here."> 
+        <ion-input type="password" required  [(ngModel)]= "password" name="password" [type]="passwordType" style="color:#ffff;" placeholder="Enter password here."> 
         </ion-input>
-        <ion-button slot="end" fill="clear"  style="margin-top: 20px">
-          <ion-icon  name="eye" color="light" style="font-size: 25px;"></ion-icon>
+        <ion-button slot="end" fill="clear"  style="margin-top: 20px" (click)='hideShowPassword()'>
+          <ion-icon color="light" style="font-size: 25px;" [name]="passwordIcon" class="passwordIcon"></ion-icon>
         </ion-button>
       </ion-item>
     </div>

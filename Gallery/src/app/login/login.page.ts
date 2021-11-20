@@ -15,6 +15,8 @@ export class LoginPage {
   close(){
     this.modalController.dismiss();
   }
+
+  
   async signIn(){
     const modal = await this.modalController.create({
       component: LoginConfirmPage,
@@ -29,8 +31,8 @@ export class LoginPage {
       component: RegisterPage,
       cssClass:'modal-fullscreen',
       id:'RegisterPage'
+      
     });
     return await modal.present();
-    
   }
 }
